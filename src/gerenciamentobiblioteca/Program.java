@@ -94,33 +94,34 @@ public class Program {
                                     int control = 0;
                                     int voltar = 0;
                                     int cont = 0;
-                                    Secao node = secoes.get(0);
-                                    int gerenciarSecao = JOptionPane.showOptionDialog(null, ":\nNome: "+node.getNome()+"\nNúmero: "+node.getNumero()+"\nQtd de prateleiras: "+node.getPrateleiras().size(), "Visualizando - Seção "+i, 0, 2, null, gerenciamentoSecoes2, gerenciamentoSecoes2[0]);
+                                    Secao node = secoes.get(cont);
+                                    int gerenciarSecao = JOptionPane.showOptionDialog(null, "Nome: "+node.getNome()+"\nNúmero: "+node.getNumero()+"\nQtd de prateleiras: "+node.getPrateleiras().size(), "Visualizando - Seção "+i, 0, 2, null, gerenciamentoSecoes2, gerenciamentoSecoes2[0]);
                                     do {
                                         switch(gerenciarSecao){
                                             case 3:
-                                                cont++;
-                                                if(cont>secoes.size()){
-                                                    //control = 1;
-                                                    cont--;
+                                                if(cont == (secoes.size() - 1)){
+                                                    //cont = 0;
                                                 }
                                                 else{
-                                                    node = secoes.get(cont);
+                                                    cont++;
                                                     i++;
                                                 }
+                                                    node = secoes.get(cont);
                                                 break;
                                             case 4:
-                                                cont--;
-                                                if(cont<1){
-                                                    cont++;
+                                                if(cont == 0){
+                                                    control = 1;
                                                 }
                                                 else{
+                                                    cont--;
                                                     node = secoes.get(cont);
                                                     i--;
                                                 }
                                                 break;
                                         }
-                                        gerenciarSecao = JOptionPane.showOptionDialog(null, ":\nNome: "+node.getNome()+"\nNúmero: "+node.getNumero()+"\nQtd de prateleiras: "+node.getPrateleiras().size(), "Visualizando - Seção "+i, 0, 2, null, gerenciamentoSecoes2, gerenciamentoSecoes2[0]);
+                                        if (control != 1) {
+                                        gerenciarSecao = JOptionPane.showOptionDialog(null, "Nome: "+node.getNome()+"\nNúmero: "+node.getNumero()+"\nQtd de prateleiras: "+node.getPrateleiras().size(), "Visualizando - Seção "+i, 0, 2, null, gerenciamentoSecoes2, gerenciamentoSecoes2[0]);
+                                        }
                                     } while (control == 0);
 
                                     
