@@ -6,10 +6,9 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author aluno
+ * @author Eduardo C.
  */
 public class Program {
-    //teste
     public static void main(String[] args) {
         boolean isSecaoCriada = false;
         boolean isPrateleiraCriada = false;
@@ -123,75 +122,6 @@ public class Program {
                                         gerenciarSecao = JOptionPane.showOptionDialog(null, "Nome: "+node.getNome()+"\nNúmero: "+node.getNumero()+"\nQtd de prateleiras: "+node.getPrateleiras().size(), "Visualizando - Seção "+i, 0, 2, null, gerenciamentoSecoes2, gerenciamentoSecoes2[0]);
                                         }
                                     } while (control == 0);
-
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-//                                    for (Secao node:secoes) {
-//                                        voltar = 0;
-//                                        while(voltar == 0){
-//                                            int gerenciarSecao = JOptionPane.showOptionDialog(null, ":\nNome: "+node.getNome()+"\nNúmero: "+node.getNumero()+"\nQtd de prateleiras: "+node.getPrateleiras().size(), "Visualizando - Seção "+i, 0, 2, null, gerenciamentoSecoes2, gerenciamentoSecoes2[0]);
-//                                            System.out.println(i);
-//                                            if (gerenciarSecao == 3) {
-//                                                if (i > secoes.size()) {
-//                                                    control = 1;
-//                                                    JOptionPane.showMessageDialog(null, "Fim da lista.", "Retornando", 2);
-//                                                }
-//                                                else{
-//                                                    i++;
-//                                                    node = secoes.get(i+1);
-//                                                    voltar = 0;
-//                                                    //continue;a
-//                                                }
-//                                            }
-//                                            else if (gerenciarSecao == 4) {
-//                                                if (i!=1) {
-//                                                    i--;
-//                                                    node = secoes.get(i-1);
-//                                                    voltar = 0;
-//                                                }
-//                                                else{
-//                                                    control = 1;
-//                                                }
-//                                            }
-//                                        }
-//                                        if (control ==1) {
-//                                            break;
-//                                        }
-//                                        cont++;
-//                                    }
                                     break;
                                 case 1:
                                     int confirm = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja criar uma nova seção?");
